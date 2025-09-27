@@ -29,11 +29,11 @@ resource "aws_vpc" "ailiya" {
 data "aws_availability_zones" "azs" {
   state = "available"
 }
-/*
+
 resource "aws_subnet" "ailiya-subnets" {
   vpc_id            = aws_vpc.ailiya.id
   for_each          = toset(data.aws_availability_zones.azs.names)
   availability_zone = each.value
   cidr_block        = cidrsubnet(local.cidr_block, 2, index(data.aws_availability_zones.azs.names, each.value))
 }
-*/
+
