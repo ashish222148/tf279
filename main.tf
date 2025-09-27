@@ -22,7 +22,7 @@ provider "aws" {
 locals {
   cidr_block = "192.168.0.0/26"
 }
-
+/*
 resource "aws_vpc" "ailiya" {
   cidr_block = local.cidr_block
 }
@@ -36,4 +36,4 @@ resource "aws_subnet" "ailiya-subnets" {
   availability_zone = each.value
   cidr_block        = cidrsubnet(local.cidr_block, 2, index(data.aws_availability_zones.azs.names, each.value))
 }
-
+*/
